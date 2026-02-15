@@ -1,0 +1,17 @@
+# Robots.txt for Silk Thread Boutique
+# https://www.silkthreadboutique.in
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Disallow admin and API routes
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+
+# Sitemap location
+Sitemap: https://www.silkthreadboutique.in/sitemap.xml
+
+# Crawl delay (optional, be careful with this)
+# Crawl-delay: 1
