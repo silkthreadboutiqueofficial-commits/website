@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
   "main": ".open-next/worker.js",
-  "name": "silkthreadboutique",
+  "name": "website",
   "compatibility_date": "2026-02-14",
   "compatibility_flags": [
     "nodejs_compat"
@@ -10,4 +10,5 @@
     "directory": ".open-next/assets",
     "binding": "ASSETS"
   }
+
 }
