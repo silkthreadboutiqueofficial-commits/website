@@ -2,6 +2,9 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
+   experimental: {
+    serverComponentsExternalPackages: ["sharp"],
+  },
   allowedDevOrigins: ["http://localhost:3000", "https://silk-thread-boutique.vercel.app", "https://www.silkthreadboutique.in"],
   images: {
     unoptimized: true, // Disable optimization to avoid Vercel free tier quota limits
@@ -23,6 +26,7 @@ const nextConfig: NextConfig = {
       }
     ],
   },
+  
   headers: async () => [
     {
       // Cache Supabase storage images aggressively

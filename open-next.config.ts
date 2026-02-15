@@ -1,3 +1,16 @@
-import { defineCloudflareConfig } from "@opennextjs/cloudflare";
+import type { OpenNextConfig } from "@opennextjs/cloudflare";
 
-export default defineCloudflareConfig();
+const config: OpenNextConfig = {
+  default: {
+    override: {
+      config: {
+        // Mark sharp as external so it's not bundled
+        experimental: {
+          serverComponentsExternalPackages: ["sharp"],
+        },
+      },
+    },
+  },
+};
+
+export default config;
