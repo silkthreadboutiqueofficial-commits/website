@@ -2,13 +2,9 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
-   experimental: {
-    serverComponentsExternalPackages: ["sharp"],
-  },
   allowedDevOrigins: ["http://localhost:3000", "https://silk-thread-boutique.vercel.app", "https://www.silkthreadboutique.in"],
   images: {
-    unoptimized: true, // Disable optimization to avoid Vercel free tier quota limits
-    // Images are compressed to WebP at upload time via sharp instead
+    unoptimized: true, // Disable Next.js image optimization — images are compressed client-side before upload
     minimumCacheTTL: 31536000, // 1 year — browser/CDN cache for optimized images
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [
